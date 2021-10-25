@@ -32,7 +32,7 @@ ingles.addEventListener('click', changes)
 function cambio (){
     let id=document.getElementById('espanol').accessKey
     console.log(id)
-    location.href="../index_es.html"
+    location.href="../index.html"
 }
 
 function changes(){
