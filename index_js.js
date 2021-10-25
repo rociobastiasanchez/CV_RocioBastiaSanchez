@@ -38,5 +38,5 @@ function cambio (){
 function changes(){
     let id=document.getElementById('ingles').accessKey
     console.log(id)
-    location.href="https://rociobastiasanchez.github.io/index_en.html"
+    location.href="https://rociobastiasanchez.github.io/cv_en.html"
 }
