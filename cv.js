@@ -20,23 +20,3 @@ function desplegar(event){
 };
     
 //Con toogle estamos alternado entre el id y la clase, llamamos a la clase que le hemos indicado el estilo en css, en este caso show
-
-//Botón cambio de idioma
-
-var espanya=document.getElementById('espanol')
-var ingles=document.getElementById('ingles')
-
-espanya.addEventListener('click', cambio)
-ingles.addEventListener('click', changes)
-
-function cambio (){
-    let id=document.getElementById('espanol').accessKey
-    console.log(id)
-    location.href="https://rociobastiasanchez.github.io/index.html"
-}
-
-function changes(){
-    let id=document.getElementById('ingles').accessKey
-    console.log(id)
-    location.href="https://rociobastiasanchez.github.io/cv_en.html"
-}
