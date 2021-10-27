@@ -32,11 +32,11 @@ ingles.addEventListener('click', changes)
 function cambio (){
     let id=document.getElementById('espanol').accessKey
     console.log(id)
-    location.href="../index.html"
+    location.href="https://rociobastiasanchez.github.io/index.html"
 }
 
 function changes(){
     let id=document.getElementById('ingles').accessKey
     console.log(id)
-    location.href="../cv_en.html"
+    location.href="https://rociobastiasanchez.github.io/cv_en.html"
 }
