@@ -490,7 +490,11 @@ svg circle:nth-child(2){
 }
 
 .row-1 section .icon_2{
-    right: -150px;
+    right: -143px;
+}
+
+.row-2 section .icon_2{
+    left: -143px;
 }
 
 .row-2 section .icon{
@@ -537,7 +541,7 @@ svg circle:nth-child(2){
         margin-top: 0;
     }
     .wrapper .linea-central{
-        height: 92%;
+        height: 90%;
     }
 }
 
