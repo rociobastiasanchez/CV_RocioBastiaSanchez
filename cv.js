@@ -20,3 +20,17 @@ function desplegar(event){
 };
     
 //Con toogle estamos alternado entre el id y la clase, llamamos a la clase que le hemos indicado el estilo en css, en este caso show
+
+//Evento para la flecha hacia arriba de la pagina
+var iconoflecha = document.querySelector('flecha');
+iconoflecha.addEventListener('click', arriba);
+
+function arriba(e){
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    }
+
+    )
+}

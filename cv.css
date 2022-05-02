@@ -1,5 +1,7 @@
 *{
+    margin: 0;
     max-width: 100vw;
+    box-sizing: border-box;
 }
 body{
     font-family: Verdana, Tahoma, sans-serif;
@@ -8,10 +10,8 @@ body{
     width: 100%;
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(8rem, 1fr));
-    background-color: #ffff ;
 }
 .encabezado{
-    background-color: #FAD7A0;
     padding: 10px;
     position: fixed;
     left: 0;
@@ -19,16 +19,9 @@ body{
     right: 0;
     text-align: center;
     z-index: 1;
-
+    background-color: white;
+    border-bottom: 1px solid #F39C12;
 }
-.idiomas{
-    position:absolute;
-}
-
-.idiomas:hover {
-    cursor:pointer;
-}
-
 
 .mainbox {
     margin: 0 auto;
@@ -36,10 +29,9 @@ body{
 }
 
 li:hover {
-    background-color: #F9EBEA;
-    color:#F9EBEA;
     cursor:pointer;
-    transition: all 0.4s linear; /* al pasar el raton se pone el color que queremos */
+    transition: all 0.4s linear;
+    transform: translateY(-5px);
 }
 
 .mainbox ul{
@@ -49,25 +41,36 @@ li:hover {
     align-content: right;
 }
 
-  .mainbox ul li{
-     display: inline-block;
+.mainbox ul li{
+    display: inline-block;
      
- }
-   .mainbox ul li a{
-       display: block;
-       align-content: space-between;
-       line-height: 30px;
-       color:rgb(10, 10, 10);
-       text-decoration: none;
-       font-size: 20px;
-       padding: 20px;
+}
+.mainbox ul li a{
+    display: block;
+    align-content: space-between;
+    line-height: 30px;
+    color:rgb(10, 10, 10);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
 
- }
+}
+.mainbox ul li a i{
+    color: #F39C12;
+    font-size: xx-large;
+}
 
 #iconomenu{
     display: none
 }
 
+#equis{
+    display: none
+}
+
+span{
+    display: none;
+}
 
 .cajainicio{
     margin-top: 150px ;
@@ -78,7 +81,7 @@ li:hover {
 
 #textoinicio{
     display: grid;
-    color:  #F39C12 ;
+    color:  #F39C12;
     text-align: left;
     margin-top: 50px;
     padding: 50px;
@@ -118,7 +121,7 @@ li:hover {
 }
 
 .rectangulo{
-    border: 1px solid #FAD7A0;
+    border: 1px solid #F39C12;
     background:  #F4F6F7  none repeat scroll 0 0;
     display: inline-flex;
     padding: 0 1vw;
@@ -136,11 +139,11 @@ li:hover {
 }
 
 .textoperfil{
+    margin: 40px;
     padding: 30px;
     justify-content: center;
     text-align: left;
 }
-
 
 .fotoperfil{
     display: flex;
@@ -148,7 +151,6 @@ li:hover {
     justify-content: center;
     margin-left: 30px;
 }
-
 
 .cajaexperiencia{
     margin-top: 100px;
@@ -192,195 +194,152 @@ li:hover {
     margin: 0.1vw;
     padding: 1vw;
     border-left: 3px solid #0a0a0a;
-    background-color:#F9E79F;
+    background-color: #fbe1bb;
     width: 80%;
 }
 
-
 .cajas{
-    padding: 10px;
-    display: grid;
-    align-items: center;
-}
-
-
-.container{
     display:grid;
-    gap: 1rem;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
-    justify-content: center;
+    gap: 4rem;
     align-items: center;
-}
-
-.containeridiomas{
-    display:grid;
-    gap: 1rem;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(245, 245, 245, 0.911);
+    border-radius: 20px;
+    margin: 40px;
+    padding: 20px;
 }
 
 .box{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_barras{
+    margin: 0%;
+    width: 25%;
     text-align: center;
+}
+
+.progress{
+    width: calc(100% - 50%);
+    height: 30px;
+    background-color:white;
+}
+
+.progress_fill_20{
+    width: 20% ;
+    background-color: #F39C12;
+    animation: progress-animation-20 3s forwards;
+}
+
+@keyframes progress-animation-20{
+    0% {width: 0%;}
+    20% {width: 20%;}
+}
+
+.progress_fill_30{
+    width: 30% ;
+    background-color: #F39C12;
+    animation: progress-animation-30 3s forwards;
+}
+
+@keyframes progress-animation-30{
+    0% {width: 0%;}
+    30% {width: 30%;}
+}
+
+
+.progress_fill_40{
+    width: 40% ;
+    background-color: #F39C12;
+    animation: progress-animation-40 3s forwards;
+}
+
+@keyframes progress-animation-40{
+    0% {width: 0%;}
+    40% {width: 40%;}
+}
+
+.progress_fill_50{
+    width: 50% ;
+    background-color: #F39C12;
+    animation: progress-animation-50 3s forwards;
+}
+
+@keyframes progress-animation-50{
+    0% {width: 0%;}
+    50% {width: 50%;}
+}
+
+.progress_fill_60{
+    width: 60% ;
+    background-color: #F39C12;
+    animation: progress-animation-60 3s forwards;
+}
+
+@keyframes progress-animation-60{
+    0% {width: 0%;}
+    60% {width: 60%;}
+}
+
+.progress_fill_65{
+    width: 65% ;
+    background-color: #F39C12;
+    animation: progress-animation-65 3s forwards;
+}
+
+@keyframes progress-animation-65{
+    0% {width: 0%;}
+    65% {width: 65%;}
+}
+
+.progress_fill_70{
+    width: 70% ;
+    background-color: #F39C12;
+    animation: progress-animation-70 3s forwards;
+}
+
+@keyframes progress-animation-70{
+    0% {width: 0%;}
+    70% {width: 70%;}
+}
+
+.progress_fill_80{
+    width: 80% ;
+    background-color: #F39C12;
+    animation: progress-animation-80 3s forwards;
+}
+
+@keyframes progress-animation-80{
+    0% {width: 0%;}
+    80% {width: 80%;}
+}
+
+.progress_fill_100{
+    width: 100% ;
+    background-color: #F39C12;
+    animation: progress-animation-100 3s forwards;
+}
+
+@keyframes progress-animation-100{
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+.cajaidiomas{
+    display:grid;
+    gap: 2rem;
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.911);
+    border-radius: 20px;
+    margin: 40px;
+    padding: 10px;
 }
 
 .box2{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
-    text-align: center;
-}
-
-.box:hover{
-    transform: translateY(-20px);
-    cursor:pointer;
-}
-
-.box2:hover{
-    transform: translateY(-20px);
-    cursor:pointer;
-}
-
-.porcentaje{
-    position: relative;
-    height: 150px;
-    border-radius: 50%;
-    align-items: center;
-}
-
-.porcentaje .numero{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-}
-
-.porcentaje .numero h2{
-    font-weight: 700;
-    font-size: 30px;
-    color:rgb(10, 10, 10);
-    transition: 0.5s;
-}
-
-.box:hover .porcentaje .numero h2{
-    color: rgb(14, 13, 13);
-    font-size: 40px;
-}
-
-.box2:hover .porcentaje .numero h2{
-    color: rgb(14, 13, 13);
-    font-size: 40px;
-}
-
-.porcentaje .numero h2 span{
-    font-size: 14px;
-    color:rgb(10, 10, 10);
-    transition: 0.5s;
-}
-
-
-.texto{ 
-    position: relative;
-    margin-top: 25px;
-    font-size: 25px;
-    letter-spacing: 1px;
-    transition: 0.5s;
-}
-
-.box:hover .texto{
-    color: rgb(14, 13, 13);
-    font-size: 28px;
-}
-
-.box2:hover .texto{
-    color: rgb(14, 13, 13);
-    font-size: 28px;
-}
-
-
-svg{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    z-index: -1;
-}
-
-svg circle{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    fill:none;
-    stroke:rgba(199, 198, 198, 0.993);
-    stroke-width: 10;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-}
-
-svg circle:nth-child(2){
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-}
-
-.box:nth-child(1) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 80) / 100);
-    stroke:#00ff43
-}
-
-.box:nth-child(2) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 65) / 100);
-    stroke:#00a1ff
-}
-
-.box:nth-child(3) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 65) / 100);
-    stroke:#ff04f7
-}
-
-.box:nth-child(4) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 65) / 100);
-    stroke:#ff0443
-}
-
-.box:nth-child(5) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 70) / 100);
-    stroke:#04ffc9
-}
-
-.box:nth-child(6) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 80) / 100);
-    stroke:#9b04ff
-}
-
-.box:nth-child(7) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 75) / 100);
-    stroke:#fbff04
-}
-
-.box:nth-child(8) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 60) / 100);
-    stroke:#ffa704
-}
-
-.box:nth-child(9) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 60) / 100);
-    stroke:#eeb6b6
-}
-
-.box2:nth-child(1) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 100) / 100);
-    stroke:#65f57d
-}
-.box2:nth-child(2) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 60) / 100);
-    stroke:#80b8e5
 }
 
 .wrapper{
@@ -393,8 +352,8 @@ svg circle:nth-child(2){
 .wrapper .linea-central{
     position: absolute;
     height: 90%;
-    width: 3px;
-    background: #f8c704;
+    width: 1px;
+    background: #F39C12;
     left: 50%;
     top: 20px;
     transform: translateX(-40%);
@@ -415,8 +374,9 @@ svg circle:nth-child(2){
 }
 
 .wrapper .row section{
-    background-color: #F9E79F;
-    border-radius: 5px;
+    background-color: #F4F6F7 ;
+    border-radius: 10px;
+    border: 1px solid #F9E79F;
     width: calc(50% - 100px);
     padding: 20px;
     position: relative;
@@ -445,7 +405,8 @@ svg circle:nth-child(2){
     content:"";
     height: 15px;
     width: 15px;
-    background: #F9E79F;
+    border: 1px solid #F9E79F;
+    background-color: #F4F6F7 ;
     top: 28px;
     z-index: -1;
     transform: rotate(45deg);
@@ -461,70 +422,101 @@ svg circle:nth-child(2){
 
 .row section .icon{
     position: absolute;
-    background: #F9E79F;
-    height: 40px;
-    width: 40px;
+    background: #ffc875;
+    height: 20px;
+    width: 20px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #0a0a0a;
+    border: 1px solid  #F39C12;
     top: 13px;
     z-index: -1;
 }
 
 .row section .icon_2{
     position: absolute;
-    background: #F9E79F;
-    height: 45px;
-    width: 90px;
+    background: #ffc875;
+    height: 20px;
+    width: 20px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #0a0a0a;
+    border: 1px solid  #F39C12;
     top: 13px;
     z-index: -1;
 }
 
+#icon{
+    margin-left: 0%;
+    border-bottom: 1px solid red;
+    text-align: center;
+    z-index: -1;
+}
+
+#icon_2{
+    margin-left: 0%;
+    border-bottom: 1px solid red;
+    text-align: center;
+    z-index: -1;
+}
+
 .row-1 section .icon{
-    right: -120px;
+    right: -111px;
 }
 
 .row-1 section .icon_2{
-    right: -143px;
+    right: -111px;
 }
 
 .row-2 section .icon_2{
-    left: -143px;
+    left: -111px;
 }
 
 .row-2 section .icon{
-    left: -120px;
+    left: -111px;
+}
+
+.cajaestudios{
+    margin-top: 50px;
 }
 
 @media(max-width: 1091px){
     .mainbox ul{
         display: none;
-        padding: 7px;
     }
 
     .mainbox ul.show{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
-    
-    .mainbox ul li{
-         display: block;
-         
-     }
-       .mainbox ul li a{
-           display: block;
-           align-content: right;
-           right: 0;
-           line-height: 30px;
-           color:rgb(10, 10, 10);
-           text-decoration: none;
-           padding: 7px;
-    
-     }
+
+    .mainbox ul li a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color:rgb(10, 10, 10);
+        text-decoration: none;
+        padding: 20px 0px;
+        border-bottom: 0.5px solid black;
+    }
+
+    li:hover {
+        transform: none;
+    }
+
+    .mainbox ul li a i{
+        font-size: x-large;
+        width: 20px;
+        margin-right: 20px;
+    }
+
+    span{
+        display: flex;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+
     #iconomenu {
         display: block;
         padding: 0%;
@@ -537,16 +529,48 @@ svg circle:nth-child(2){
     #iconomenu:hover{
         cursor:pointer;
     }
+    #equis{
+        display: block;
+    }
     .cajainicio{
         margin-top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .rectangulo{
+        font-size: 1.5rem;
     }
     .wrapper .linea-central{
-        height: 90%;
+        height: 91%;
+    }
+    .cajas{
+        display:grid;
+        gap: 1rem;
+        margin: 5%;
+    }
+    .box{
+        margin: 0%;
+    }
+    .texto_barras{
+        font-size: 1rem;
+        margin: 0%;
     }
 }
 
 @media(max-width: 772px){
+    .cajainicio{
+        display: grid;
+    }
+    .rectangulo{
+        font-size: 1rem;
+    }
     .wrapper .linea-central{
+        display: none;
+    }
+    .icon{
+        display: none;
+    }
+    .icon_2{
         display: none;
     }
     .wrapper .row section{
@@ -557,40 +581,47 @@ svg circle:nth-child(2){
         justify-content: center;
     }
     .row-1 section::before{
-        left: -7px;
+        display: none;
     }
-    .row-1 section .icon{
-        left: -80px;
+    .row-2 section::before{
+        display: none;
     }
-    .row-2 section .icon{
-        left: -80px;
+    .cajas{
+        display:grid;
+        gap: 1rem;
+        margin: 5%;
     }
-    .row-1 section .icon_2{
-        left: -90px;
-        height: 75px;
-        width: 70px;
+    .cajaidiomas{
+        display:grid;
+        gap: 1rem;
+        margin: 5%;
+    }
+    .box{
+        margin: 0%;
+        justify-content: space-around;
+    }
+    .box2{
+        margin: 0%;
+        justify-content: space-around;
+    }
+    .texto_barras{
+        font-size: 0.8rem;
     }
     #fotoperfil{
         margin-left: 0;
     }
-    
 }
 
 @media(max-width: 480px){
+    .cajainicio{
+        display: grid;
+    }
+    .rectangulo{
+        font-size: 0.5rem;
+    }
     .wrapper .linea-central,
     .row section::before{
         display:none;
-    }
-    .row section .icon,
-    .row section .icon_2{
-        left: 0%;
-        margin-top: 0%;
-        z-index: -1;
-        background: none;
-        color: #0a0a0afd;
-        width: 100px;
-        height: 40px;
-        text-align: center;
     }
     .detalles, p{
         margin-top: 10%;
@@ -599,15 +630,47 @@ svg circle:nth-child(2){
         margin: 10px 0 ;
         z-index: -1;
     }
+    .cajas{
+        display:grid;
+        gap: 1rem;
+        margin: 5%;
+    }
+    .box{
+        margin: 0%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .texto_barras{
+        font-size: 0.8rem;
+    }
+    .cajaidiomas{
+        display:grid;
+        gap: 1rem;
+        margin: 5%;
+    }
+    .box2{
+        margin: 0%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .cajaportfolio{
+        display: grid;
+        gap: 1rem;
+    }
     #video{
         width: 250px;
         height: 200px;
     }
-    
+}
+
+.cajaportfolio{
+    display:grid;
+    gap: 4rem;
+    align-items: center;
 }
 
 .imagenes{
-    margin: 40px;
+    margin: 50px;
     display:grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
@@ -641,7 +704,7 @@ svg circle:nth-child(2){
 }
 
 .contenedor{
-    margin-left: 10px;
+    margin-left: 50px;
     line-height: 5px;
 }
     
@@ -649,15 +712,31 @@ svg circle:nth-child(2){
     margin-top: 50px;
     padding: 10px;
     text-align: center;
-    background-color: #f3d449;
+    background-color: #F39C12;
     font-size: x-large;
     width: 50px;
     height: 45px;
 }
 
+#flecha{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(8rem, 1fr));
+    font-size: x-large;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: #F39C12;
+    justify-content: center;
+    position: fixed;
+    right: 15px;
+    bottom: 70px;
+    margin: 2%;
+}
+
 #footer{
     margin-top: 50px;
-    background-color:#FAD7A0;
+    background-color:whitesmoke;
     padding: 20px;
     left: 0;
     bottom: 0;
@@ -665,4 +744,12 @@ svg circle:nth-child(2){
     text-align: center;
     align-content: center;
     z-index: 1;
+}
+
+#descargar button:hover{
+    cursor:pointer;
+    background-color: whitesmoke;
+    list-style: none;
+    transform: translateY(5px);
+    transition: all 0.4s linear;
 }
