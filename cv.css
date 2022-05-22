@@ -183,6 +183,10 @@ span{
     justify-content: center;
     align-items: center;
     margin: 40px;
+    padding: 10px;
+    background-color: rgba(245, 245, 245, 0.911);
+    border-radius: 20px;
+    border: 1px solid #F9E79F;
 }
 
 .year{
@@ -193,8 +197,8 @@ span{
 .titulo{
     margin: 0.1vw;
     padding: 1vw;
-    border-left: 3px solid #0a0a0a;
     background-color: #fbe1bb;
+    border-radius: 20px;
     width: 80%;
 }
 
@@ -203,6 +207,7 @@ span{
     gap: 4rem;
     align-items: center;
     background-color: rgba(245, 245, 245, 0.911);
+    border: 1px solid #F9E79F;
     border-radius: 20px;
     margin: 40px;
     padding: 20px;
@@ -332,6 +337,7 @@ span{
     align-items: center;
     background-color: rgba(245, 245, 245, 0.911);
     border-radius: 20px;
+    border: 1px solid #F9E79F;
     margin: 40px;
     padding: 10px;
 }
