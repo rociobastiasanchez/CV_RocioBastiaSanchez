@@ -183,7 +183,6 @@ span{
     justify-content: center;
     align-items: center;
     margin: 40px;
-    padding: 10px;
     background-color: rgba(245, 245, 245, 0.911);
     border-radius: 20px;
     border: 1px solid #F9E79F;
@@ -194,11 +193,11 @@ span{
     text-align: center;
 }
 
+
 .titulo{
     margin: 0.1vw;
     padding: 1vw;
-    background-color: #fbe1bb;
-    border-radius: 20px;
+    border-left: 5px solid #F39C12;
     width: 80%;
 }
 
